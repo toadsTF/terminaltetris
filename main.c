@@ -157,6 +157,7 @@ int main(int argc, char **argv)
 {
     //check if terminal is properly sized
     struct winsize w;
+    srandom(time(NULL));
     ioctl(STDOUT_FILENO, TIOCGWINSZ, &w);
     if(w.ws_row < 26 || w.ws_col < 24)
     {
